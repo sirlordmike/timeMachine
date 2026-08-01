@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Time Machine - VR Simulator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Runs immediately, even if ES modules are blocked (file:// protocol). -->
+<script>
+  if (location.protocol === 'file:') {
+    document.body.innerHTML =
+      '<div id="file-protocol-warning">' +
+      '<b>This page needs to be served over http(s), not opened directly as a file.</b><br/><br/>' +
+      'From the folder containing index.html, style.css, main.js and timemachine_control_group.glb, run one of:<br/><br/>' +
+      '<code>npx serve</code><br/><br/>or<br/><br/>' +
+      '<code>python3 -m http.server 8080</code><br/><br/>' +
+      'Then open the printed <code>http://localhost:...</code> address (and, for VR, on your headset\'s browser).' +
+      '</div>';
+  }
+</script>
+
+<div id="overlay">
+  <h1>Time Machine - VR Simulator</h1>
+  Desktop preview: drag to orbit, scroll to zoom.<br/>
+  In VR &mdash; point at the button and pull the trigger to power on.<br/>
+  <b>Left stick</b>: forward/back/strafe &nbsp;&bull;&nbsp; <b>Right stick Y</b>: up/down &nbsp;&bull;&nbsp; <b>Either trigger</b>: accelerate<br/>
+  <b>Left X button</b>: sit in the seat &nbsp;&bull;&nbsp; <b>Left Y button</b>: stand back up<br/>
+  <b>Grip squeeze</b>: fire the gun &nbsp;&bull;&nbsp; drones take 2 hits, the machine can take 3
+</div>
+<div id="status">loading&hellip;</div>
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>

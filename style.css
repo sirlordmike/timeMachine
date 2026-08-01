@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #1b2030;
+  font-family: system-ui, sans-serif;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+  color: #cfe8ff;
+  padding: 14px 18px;
+  pointer-events: none;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+#overlay h1 { font-size: 15px; margin: 0 0 6px 0; color: #fff; }
+#overlay code { background: rgba(255,255,255,0.12); padding: 1px 5px; border-radius: 4px; }
+
+#status {
+  position: fixed;
+  bottom: 14px; left: 14px;
+  z-index: 5;
+  color: #9fd6ff;
+  font-size: 12px;
+  max-width: 90vw;
+  white-space: pre-wrap;
+}
+#status.error {
+  color: #ffb3b3;
+  background: rgba(60,0,0,0.6);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+#file-protocol-warning {
+  position: fixed; inset: 0; z-index: 999;
+  background: #7a0d0d; color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  padding: 40px; box-sizing: border-box;
+}
+#file-protocol-warning code {
+  background: rgba(255,255,255,0.15);
+  padding: 2px 8px; border-radius: 4px; font-size: 15px;
+}
